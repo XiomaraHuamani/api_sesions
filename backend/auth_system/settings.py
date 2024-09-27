@@ -80,24 +80,28 @@ TEMPLATES = [
 WSGI_APPLICATION = 'auth_system.wsgi.application'
 
 
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'auth_system',
+        'NAME': 'prueba_login_x',
         'USER': 'postgres',
-        'PASSWORD': '[YOUR DATABASE PASSWORD]',
-        'HOST': 'localhost'
+        'PASSWORD': '9780ubuntu',
+        'HOST': '213.199.44.2'
     }
 }
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+#EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = '[YOUR EMAIL THAT WILL SEND]'
-EMAIL_HOST_PASSWORD = '[YOUR EMAIL APP PASSWORD]'
+EMAIL_HOST_USER = 'xiomara.huamani.c@gmail.com'
+EMAIL_HOST_PASSWORD = '%23Fu115TacK%'
 EMAIL_USE_TLS = True
 
 # Password validation
@@ -137,7 +141,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'build/static')
+    os.path.join(BASE_DIR, 'staticfiles')
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
